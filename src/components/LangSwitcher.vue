@@ -10,7 +10,6 @@
     emit-value
     map-options
     options-dense
-    style="min-width: 150px"
   />
   <!-- ...... -->
 </template>
@@ -23,13 +22,15 @@ export default {
       lang: this.$i18n.locale,
       langOptions: [
         { value: "en-us", label: "English" },
-        { value: "de", label: "German" }
+        { value: "zh-hk", label: "中文" }
       ]
     };
   },
   watch: {
     lang(lang) {
       this.$i18n.locale = lang;
+      localStorage.setItem("lang", lang);
+      window.location.reload();
     }
   }
 };

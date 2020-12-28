@@ -10,7 +10,6 @@
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
-
         <q-toolbar-title>
           Quasar App
         </q-toolbar-title>
@@ -49,58 +48,56 @@ import EssentialLink from "components/EssentialLink.vue";
 import LangSwitcher from "components/LangSwitcher.vue";
 import RootToolBar from "components/RootToolBar.vue";
 
-const linksData = [
-  {
-    title: "銷售管理",
-    caption: "quasar.dev",
-    icon: "school",
-    link: "https://quasar.dev"
-  },
-  {
-    title: "採購管理",
-    caption: "github.com/quasarframework",
-    icon: "code",
-    link: "https://github.com/quasarframework"
-  },
-  {
-    title: "庫存管理",
-    caption: "chat.quasar.dev",
-    icon: "chat",
-    link: "https://chat.quasar.dev"
-  },
-  {
-    title: "Forum",
-    caption: "forum.quasar.dev",
-    icon: "record_voice_over",
-    link: "https://forum.quasar.dev"
-  },
-  {
-    title: "Twitter",
-    caption: "@quasarframework",
-    icon: "rss_feed",
-    link: "https://twitter.quasar.dev"
-  },
-  {
-    title: "Facebook",
-    caption: "@QuasarFramework",
-    icon: "public",
-    link: "https://facebook.quasar.dev"
-  },
-  {
-    title: "Quasar Awesome",
-    caption: "Community Quasar projects",
-    icon: "favorite",
-    link: "https://awesome.quasar.dev"
-  }
-];
-
 export default {
   name: "MainLayout",
   components: { EssentialLink, LangSwitcher, RootToolBar },
   data() {
     return {
       leftDrawerOpen: false,
-      essentialLinks: linksData
+      essentialLinks: [
+        {
+          title: this.$t("main_menu_item.sales"),
+          caption: "quasar.dev",
+          icon: "school",
+          link: "https://quasar.dev"
+        },
+        {
+          title: this.$t("main_menu_item.purchase"),
+          caption: "github.com/quasarframework",
+          icon: "code",
+          link: "https://github.com/quasarframework"
+        },
+        {
+          title: this.$t("main_menu_item.inventory"),
+          caption: "chat.quasar.dev",
+          icon: "chat",
+          link: "https://chat.quasar.dev"
+        },
+        {
+          title: "Forum",
+          caption: "forum.quasar.dev",
+          icon: "record_voice_over",
+          link: "https://forum.quasar.dev"
+        },
+        {
+          title: "Twitter",
+          caption: "@quasarframework",
+          icon: "rss_feed",
+          link: "https://twitter.quasar.dev"
+        },
+        {
+          title: "Facebook",
+          caption: "@QuasarFramework",
+          icon: "public",
+          link: "https://facebook.quasar.dev"
+        },
+        {
+          title: "Quasar Awesome",
+          caption: "Community Quasar projects",
+          icon: "favorite",
+          link: "https://awesome.quasar.dev"
+        }
+      ]
     };
   }
 };
