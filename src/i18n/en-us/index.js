@@ -5,7 +5,6 @@ export default {
   lang: 'English',
   failed: 'Action failed',
   success: 'Action was successful',
-  demo: 'demo'
 }
 
 
