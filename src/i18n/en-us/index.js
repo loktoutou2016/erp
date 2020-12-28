@@ -7,5 +7,5 @@ export default {
   success: 'Action was successful',
 }
 
-
+// 測試master branch
 
