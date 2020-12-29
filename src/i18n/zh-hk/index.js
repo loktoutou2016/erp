@@ -18,10 +18,10 @@ export default {
   },
   main_menu_item: {
     home: "主頁",
-    sales: "銷售",
-    purchase: "採購",
-    inventory: "倉儲",
-    crm: "客戶關係",
+    sales: "銷售管理",
+    purchase: "採購管理",
+    inventory: "倉儲管理",
+    crm: "客戶關係管理",
     accounting: "會計"
   }
 };
