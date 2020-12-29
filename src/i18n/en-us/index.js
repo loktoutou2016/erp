@@ -6,9 +6,14 @@ export default {
   failed: "Action failed",
   success: "Action was successful",
 
+  router_title: {},
+  main_title: "OA System",
   main_menu_item: {
+    home: "Home",
     sales: "Sales",
     purchase: "Purchase",
-    inventory: "Inventory"
+    inventory: "Inventory",
+    crm: "CRM",
+    accounting: "Accounting"
   }
 };

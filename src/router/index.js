@@ -26,5 +26,13 @@ export default function (/* { store, ssrContext } */) {
     base: process.env.VUE_ROUTER_BASE
   })
 
+  Router.beforeEach((to, from, next) => {
+    /* 路由发生变化修改页面title */
+    if (to.meta.title) {
+      document.title = to.meta.title
+    }
+    next()
+  })
+
   return Router
 }

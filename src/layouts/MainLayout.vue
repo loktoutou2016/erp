@@ -11,7 +11,7 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
         <q-toolbar-title>
-          Quasar App
+          {{ $t("main_title") }}
         </q-toolbar-title>
         <RootToolBar />
       </q-toolbar>
@@ -23,6 +23,7 @@
       bordered
       content-class="bg-grey-1"
     >
+      <DateTimeBar />
       <q-list>
         <div class="row q-ma-md justify-start">
           <div class="col-4">
@@ -47,55 +48,44 @@
 import EssentialLink from "components/EssentialLink.vue";
 import LangSwitcher from "components/LangSwitcher.vue";
 import RootToolBar from "components/RootToolBar.vue";
+import DateTimeBar from "components/DateTimeBar.vue";
 
 export default {
   name: "MainLayout",
-  components: { EssentialLink, LangSwitcher, RootToolBar },
+  components: { EssentialLink, LangSwitcher, RootToolBar, DateTimeBar },
   data() {
     return {
       leftDrawerOpen: false,
       essentialLinks: [
         {
-          title: this.$t("main_menu_item.sales"),
-          caption: "quasar.dev",
-          icon: "school",
-          link: "https://quasar.dev"
+          title: this.$t("main_menu_item.home"),
+          icon: "home",
+          link: "/"
         },
         {
-          title: this.$t("main_menu_item.purchase"),
-          caption: "github.com/quasarframework",
-          icon: "code",
-          link: "https://github.com/quasarframework"
+          title: this.$t("main_menu_item.sales"),
+          icon: "receipt_long",
+          link: "sales"
+        },
+        {
+          title: this.$t("main_menu_item.crm"),
+          icon: "contact_page",
+          link: "crm"
         },
         {
           title: this.$t("main_menu_item.inventory"),
-          caption: "chat.quasar.dev",
-          icon: "chat",
-          link: "https://chat.quasar.dev"
+          icon: "inventory_2",
+          link: "inventory"
         },
         {
-          title: "Forum",
-          caption: "forum.quasar.dev",
-          icon: "record_voice_over",
-          link: "https://forum.quasar.dev"
+          title: this.$t("main_menu_item.purchase"),
+          icon: "shop_two",
+          link: "purchase"
         },
         {
-          title: "Twitter",
-          caption: "@quasarframework",
-          icon: "rss_feed",
-          link: "https://twitter.quasar.dev"
-        },
-        {
-          title: "Facebook",
-          caption: "@QuasarFramework",
-          icon: "public",
-          link: "https://facebook.quasar.dev"
-        },
-        {
-          title: "Quasar Awesome",
-          caption: "Community Quasar projects",
-          icon: "favorite",
-          link: "https://awesome.quasar.dev"
+          title: this.$t("main_menu_item.accounting"),
+          icon: "local_atm",
+          link: "accounting"
         }
       ]
     };

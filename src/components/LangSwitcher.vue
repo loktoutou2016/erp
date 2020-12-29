@@ -21,8 +21,8 @@ export default {
     return {
       lang: this.$i18n.locale,
       langOptions: [
-        { value: "en-us", label: "English" },
-        { value: "zh-hk", label: "中文" }
+        { value: "zh-hk", label: "中文" },
+        { value: "en-us", label: "English" }
       ]
     };
   },
